@@ -11,6 +11,7 @@ gem 'haml-rails'
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'factory_girl'
 end
 # Use unicorn as the web server
 # gem 'unicorn'
