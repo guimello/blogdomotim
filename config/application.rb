@@ -36,8 +36,9 @@ module Blogdomotim
     config.i18n.default_locale = :'pt-BR'
 
     config.generators do |g|
-      g.template_engine :haml
-      g.test_framework  :rspec
+      g.template_engine     :haml
+      g.test_framework      :rspec
+      g.fixture_replacement :factory_girl
     end
 
     # JavaScript files you want as :defaults (application.js is always included).
