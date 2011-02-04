@@ -8,6 +8,11 @@ gem 'rails', '3.0.3'
 gem 'mysql2'
 gem 'jquery-rails'
 gem 'haml-rails'
+gem 'devise'
+gem 'cancan'
+gem 'dynamic_form'
+gem 'validation_reflection'
+
 
 group :test, :development do
   gem 'rspec-rails'
@@ -24,7 +29,7 @@ gem 'rails3-generators', :group => :development
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
-# gem 'ruby-debug19'
+gem 'ruby-debug19'
 
 # Bundle the extra gems:
 # gem 'bj'
