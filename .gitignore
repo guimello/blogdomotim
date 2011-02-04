@@ -1,0 +1,15 @@
+*.log
+*~
+*.DS_Store
+log/*
+public/.htaccess
+config/environments/development.rb
+config/database.yml
+config/smtp.yml
+config/sendmail.yml
+*.~lock.*
+*.swp
+public/stylesheets/all.css
+public/javascripts/all.js
+.rvmrc
+tmp
