@@ -13,6 +13,9 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'factory_girl'
 end
+
+gem 'rails3-generators', :group => :development
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
