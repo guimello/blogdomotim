@@ -19,7 +19,8 @@ group :test, :development do
   gem 'factory_girl'
 end
 
-gem 'rails3-generators', :group => :development
+gem 'rails3-generators',  :group => :development
+gem 'nifty-generators',   :group => :development
 
 # Use unicorn as the web server
 # gem 'unicorn'
