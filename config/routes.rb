@@ -1,4 +1,6 @@
 Blogdomotim::Application.routes.draw do
+  namespace(:admin){ resources :roles }
+
   root :to => 'home#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.

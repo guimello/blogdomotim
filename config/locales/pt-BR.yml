@@ -1,4 +1,24 @@
 pt-BR:
+  new: 'Novo(a)'
+  edit: 'Editar'
+  show: 'Ver'
+  sure: 'Você tem certeza?'
+  destroy: 'Remover'
+  all: 'Todos'
+
+  flash:
+    actions:
+      create:
+        notice: '%{resource} criado(a) com sucesso!'
+        alert: 'Erro ao criar o/a %{resource}'
+      update:
+        notice: '%{resource} atualizado(a) com sucesso!'
+        alert: 'Erro ao atualizar o/a %{resource}'
+      destroy:
+        notice: '%{resource} removido(a) com sucesso!'
+        alert: 'Erro ao remover o/a %{resource}'
+
+
   # formatos de data e hora
   date:
     formats:
@@ -141,12 +161,23 @@ pt-BR:
     
   # ActiveRecord
   activerecord:
+    models:
+      admin:
+        role:
+          one: 'Papel'
+          other: 'Papéis'
+    attributes:
+      admin:
+        role:
+          name: 'Nome'
     errors:
       template:
         header:
           one: "Não foi possível gravar %{model}: 1 erro"
           other: "Não foi possível gravar %{model}: %{count} erros."
         body: "Por favor, verifique o(s) seguinte(s) campo(s):"
+        fixme: 'Corriga o(s) erro(s) abaixo:'
+        title: 'Erro(s)'
       messages:
         inclusion: "não está incluído na lista"
         exclusion: "não está disponível"

@@ -10,8 +10,9 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'devise'
 gem 'cancan'
-gem 'dynamic_form'
+# gem 'dynamic_form'
 gem 'validation_reflection'
+gem 'inherited_resources'
 
 
 group :test, :development do

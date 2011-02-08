@@ -1,0 +1,13 @@
+- title (Admin::Role.model_name.human count: 2)
+
+%table
+  %tr
+    %th= Admin::Role.human_attribute_name :name
+  - for role in @roles
+    %tr
+      %td= role.name
+      %td= link_to t(:show), role
+      %td= link_to t(:edit), edit_admin_role_path(role)
+      %td= link_to t(:destroy), role, :confirm => t(:sure), :method => :delete
+
+%p= link_to t(:new), new_admin_role_path

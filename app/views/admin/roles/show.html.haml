@@ -1,0 +1,12 @@
+- title Admin::Role.model_name.human
+
+%p
+  %strong= Admin::Role.human_attribute_name :name
+  = @role.name
+
+%p
+  = link_to t(:edit), edit_admin_role_path(@role)
+  |
+  = link_to t(:destroy), @role, :confirm => t(:sure), :method => :delete
+  |
+  = link_to t(:all), admin_roles_path

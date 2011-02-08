@@ -2,9 +2,9 @@ module ErrorMessagesHelper
   # Render error messages for the given objects. The :message and :header_message options are allowed.
   def error_messages_for(*objects)
     options = objects.extract_options!
-    options[:header_message] ||= "Invalid Fields"
-    options[:message] ||= "Correct the following errors and try again."
+    options[:header_message] ||= t(:title, :scope => [:activerecord, :errors, :template])
     messages = objects.compact.map { |o| o.errors.full_messages }.flatten
+    options[:message] ||= t(:fixme, :scope => [:activerecord, :errors, :template])
     unless messages.empty?
       content_tag(:div, :class => "error_messages") do
         list_items = messages.map { |msg| content_tag(:li, msg) }
