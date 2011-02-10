@@ -18,6 +18,11 @@ pt-BR:
         notice: '%{resource} removido(a) com sucesso!'
         alert: 'Erro ao remover o/a %{resource}'
 
+  # Models
+  user:
+    invalid:
+      birthday: 'inválida'
+
 
   # formatos de data e hora
   date:
@@ -166,10 +171,19 @@ pt-BR:
         role:
           one: 'Papel'
           other: 'Papéis'
+      user:
+        one: 'Usuário'
+        other: 'Usuários'
     attributes:
       admin:
         role:
           name: 'Nome'
+      user:
+        name: 'Nome'
+        birthday: 'Data de nascimento'
+        password: 'Senha'
+        password_confirmation: 'Confirmação de senha'
+        remember_me: 'Lembrar senha'
     errors:
       template:
         header:
