@@ -20,8 +20,12 @@ group :test, :development do
   gem 'factory_girl'
 end
 
-gem 'rails3-generators',  :group => :development
-gem 'nifty-generators',   :group => :development
+group :development do
+  gem 'rails3-generators'
+  gem 'nifty-generators'
+  gem 'hpricot'
+  gem 'ruby_parser'
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'
