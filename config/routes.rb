@@ -1,4 +1,6 @@
 Blogdomotim::Application.routes.draw do
+  devise_for :users
+
   namespace(:admin){ resources :roles }
 
   root :to => 'home#index'
