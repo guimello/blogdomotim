@@ -1,7 +1,7 @@
 class CreateAdminRoles < ActiveRecord::Migration
   def self.up
     create_table :admin_roles do |t|
-      t.string :name
+      t.string :name, :null => false
 
       t.timestamps
     end
