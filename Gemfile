@@ -14,6 +14,7 @@ gem 'cancan'
 gem 'validation_reflection'
 gem 'inherited_resources'
 gem 'foreigner'
+gem 'simple_form'
 
 group :test, :development do
   gem 'rspec-rails'
