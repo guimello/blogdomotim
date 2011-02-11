@@ -1,9 +1,15 @@
 Blogdomotim::Application.routes.draw do
   devise_for :users
 
-  namespace(:admin){ resources :roles }
+  resources :posts, :only => [:show, :index]
 
-  root :to => 'home#index'
+  namespace :admin do
+    resources :roles
+    resources :posts, :except => [:show, :index]
+  end
+
+  root :to => 'posts#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

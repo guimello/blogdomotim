@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
                           :join_table               => 'admin_roles_users',
                           :association_foreign_key  => 'admin_role_id'
 
+  has_many :posts
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,
                   :name,  :birthday
