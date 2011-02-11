@@ -6,6 +6,11 @@ pt-BR:
   destroy: 'Remover'
   all: 'Todos'
 
+  helpers:
+    submit:
+      create: 'Adicionar %{model}'
+      update: 'Salvar %{model}'
+
   flash:
     actions:
       create:
