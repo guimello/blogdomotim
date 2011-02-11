@@ -4,6 +4,9 @@ class CreateUsersHaveAndBelongToManyAdminRole < ActiveRecord::Migration
       t.references :admin_role, :user, :null => false
     end
 
+    add_foreign_key :admin_roles_users, :admin_roles, :dependent => :delete
+    add_foreign_key :admin_roles_users, :users,       :dependent => :delete
+
     add_index :admin_roles_users, [:admin_role_id, :user_id], :uniq => true
   end
 

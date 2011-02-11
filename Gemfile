@@ -13,7 +13,7 @@ gem 'cancan'
 # gem 'dynamic_form'
 gem 'validation_reflection'
 gem 'inherited_resources'
-
+gem 'foreigner'
 
 group :test, :development do
   gem 'rspec-rails'

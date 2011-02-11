@@ -7,6 +7,8 @@ class CreatePosts < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_foreign_key :posts, :users, :dependent => :delete
   end
 
   def self.down
