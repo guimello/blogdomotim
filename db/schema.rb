@@ -10,13 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110210213320) do
+ActiveRecord::Schema.define(:version => 20110211005829) do
 
   create_table "admin_roles", :force => true do |t|
     t.string   "name",       :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "admin_roles_users", :id => false, :force => true do |t|
+    t.integer "admin_role_id", :null => false
+    t.integer "user_id",       :null => false
+  end
+
+  add_index "admin_roles_users", ["admin_role_id", "user_id"], :name => "index_admin_roles_users_on_admin_role_id_and_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false

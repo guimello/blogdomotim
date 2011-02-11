@@ -4,6 +4,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable, :lockable
 
+  has_and_belongs_to_many :roles,
+                          :class_name               => 'Admin::Role',
+                          :join_table               => 'admin_roles_users',
+                          :association_foreign_key  => 'admin_role_id'
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,
                   :name,  :birthday
@@ -11,6 +16,20 @@ class User < ActiveRecord::Base
   validates :name, :presence => true, :allow_blank => true, :length => { :minimum => 1, :maximum => 255 }
   validates :birthday, :presence => true, :if => proc { |user| user.birthday.blank? && user.birthday_before_type_cast.blank? }
   validate  :birthday_format
+
+  after_save :add_user_role
+
+  def role?(role)
+    !!roles.find_by_name(role.to_s)
+  end
+
+  def admin?
+    !!roles.find_by_name(Admin::Role::ADMIN) 
+  end
+
+  def user?
+    !!roles.find_by_name(Admin::Role::USER) 
+  end
 
   protected
 
@@ -26,5 +45,9 @@ class User < ActiveRecord::Base
         self.errors.add :birthday, I18n.t(:birthday, :scope => [:user, :invalid])
       end
     end
+  end
+
+  def add_user_role
+    roles << Admin::Role.user if roles.empty?
   end
 end
