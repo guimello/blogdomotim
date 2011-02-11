@@ -21,7 +21,7 @@
   %p
     = f.label :birthday
     %br/
-    = f.text_field :birthday, :size => 10, :class => :datepicker, :value => f.object.birthday.present? ? l(f.object.birthday) : f.object.birthday_before_type_cast
+    = f.text_field :birthday, :size => 10, :'data-changemonth' => true, :'data-changeyear' => true, :'data-maxdate' => l(Time.current.to_date),  :class => :datepicker, :value => f.object.birthday.present? ? l(f.object.birthday) : f.object.birthday_before_type_cast
 
 
   %p= f.submit "Sign up"
