@@ -1,0 +1,8 @@
+- title Post.model_name.human
+
+= render 'form', post: @post
+
+%p
+  = link_to t(:show), @post
+  |
+  = link_to t(:all), posts_path
