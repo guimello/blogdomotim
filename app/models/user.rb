@@ -33,6 +33,10 @@ class User < ActiveRecord::Base
     !!roles.find_by_name(Admin::Role::USER) 
   end
 
+  def author?
+    !!roles.find_by_name(Admin::Role::AUTHOR) 
+  end
+
   protected
 
   def birthday_format

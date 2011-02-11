@@ -6,7 +6,7 @@ class CreateAdminRoles < ActiveRecord::Migration
       t.timestamps
     end
 
-    [ Admin::Role::ADMIN, Admin::Role::USER ].each { |role| Admin::Role.create! :name => role }
+    [ Admin::Role::ADMIN, Admin::Role::USER, Admin::Role::AUTHOR ].each { |role| Admin::Role.create! :name => role }
   end
 
   def self.down
