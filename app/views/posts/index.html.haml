@@ -15,7 +15,7 @@
       %td= post.body
       %td= link_to 'Show', post
       %td= link_to 'Edit', edit_admin_post_path(post)
-      %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Destroy', admin_post_path(post), :confirm => 'Are you sure?', :method => :delete
 
 %br
 
