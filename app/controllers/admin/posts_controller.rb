@@ -6,11 +6,15 @@ class Admin::PostsController < InheritedResources::Base
   respond_to :html
 
   def create
-    create! { post_path @post }
+    create! do |success, failure|
+      success.html { redirect_to post_path(@post) }
+    end
   end
 
   def update
-    update! { post_path @post }
+    update! do |success, failure|
+      success.html { redirect_to post_path(@post) }
+    end
   end
 
   protected
