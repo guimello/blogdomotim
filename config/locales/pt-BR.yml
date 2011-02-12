@@ -14,14 +14,14 @@ pt-BR:
   flash:
     actions:
       create:
-        notice: '%{resource} criado(a) com sucesso!'
-        alert: 'Erro ao criar o/a %{resource}'
+        notice: '%{resource_name} criado(a) com sucesso!'
+        alert: 'Erro ao criar o/a %{downcase_resource_name}'
       update:
-        notice: '%{resource} atualizado(a) com sucesso!'
-        alert: 'Erro ao atualizar o/a %{resource}'
+        notice: '%{resource_name} atualizado(a) com sucesso!'
+        alert: 'Erro ao atualizar o/a %{downcase_resource_name}'
       destroy:
-        notice: '%{resource} removido(a) com sucesso!'
-        alert: 'Erro ao remover o/a %{resource}'
+        notice: '%{resource_name} removido(a) com sucesso!'
+        alert: 'Erro ao remover o/a %{downcase_resource_name}'
 
   # Models
   user:
