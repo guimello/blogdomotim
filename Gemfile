@@ -15,6 +15,7 @@ gem 'validation_reflection'
 gem 'inherited_resources'
 gem 'foreigner'
 gem 'simple_form'
+gem 'mail'
 
 group :test, :development do
   gem 'rspec-rails'

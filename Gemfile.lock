@@ -137,6 +137,7 @@ DEPENDENCIES
   hpricot
   inherited_resources
   jquery-rails
+  mail
   mysql2
   nifty-generators
   rails (= 3.0.4)
