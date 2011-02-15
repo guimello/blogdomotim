@@ -1,0 +1,8 @@
+development:
+  enable_starttls_auto: true
+  address: smtp.gmail.com
+  port: 587
+  domain: ohmygod.com 
+  user_name: xxx 
+  password: xxx
+  authentication: plain

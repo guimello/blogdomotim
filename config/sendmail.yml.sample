@@ -1,0 +1,2 @@
+development:
+  location: /usr/sbin/sendmail
