@@ -1,0 +1,6 @@
+ var previous_div = $('.load-more-collection-container').prev();
+ $('.load-more-collection-container').remove();
+ $('div.posts-container').append("<%= escape_javascript(render 'posts', :posts => @posts) %>");
+
+ previous_div.nextAll('div.post').hide().fadeIn('slow');
+ previous_div.next().scrollTo(1000);

@@ -8,6 +8,8 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.page(params[:page]).per(params[:per])
+
+    render 'posts.xhr' and return if request.xhr?
     respond_with @posts
   end
 

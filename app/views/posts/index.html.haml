@@ -1,10 +1,8 @@
 - title Post.model_name.human.pluralize
 %h1 Listing posts
 
-= paginate @posts
-
 .posts-container
-  = render 'posts', :posts => @posts
+  = render 'posts', :posts => @posts 
 
 %table
   %tr
@@ -25,3 +23,5 @@
 %br
 
 = link_to 'New Post', new_admin_post_path
+
+- javascript 'posts'
