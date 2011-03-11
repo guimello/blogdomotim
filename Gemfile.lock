@@ -57,6 +57,8 @@ GEM
     jquery-rails (0.2.7)
       rails (~> 3.0)
       thor (~> 0.14.4)
+    kaminari (0.10.4)
+      rails (>= 3.0.0)
     linecache19 (0.5.11)
       ruby_core_source (>= 0.1.4)
     mail (2.2.15)
@@ -137,6 +139,7 @@ DEPENDENCIES
   hpricot
   inherited_resources
   jquery-rails
+  kaminari
   mail
   mysql2
   nifty-generators

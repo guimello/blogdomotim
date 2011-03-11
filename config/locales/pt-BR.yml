@@ -11,6 +11,12 @@ pt-BR:
       create: 'Adicionar %{model}'
       update: 'Salvar %{model}'
 
+  views:
+    pagination:
+      previous: '&lt; Anterior'
+      next: 'Próximo &gt;'
+
+
   flash:
     actions:
       create:

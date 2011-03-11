@@ -16,6 +16,7 @@ gem 'inherited_resources'
 gem 'foreigner'
 gem 'simple_form'
 gem 'mail'
+gem 'kaminari'
 
 group :test, :development do
   gem 'rspec-rails'

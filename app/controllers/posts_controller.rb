@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   before_filter :find_current, :only => :show
 
   def index
-    @posts = Post.all
+    @posts = Post.page(params[:page]).per(params[:per])
     respond_with @posts
   end
 
