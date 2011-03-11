@@ -3,6 +3,9 @@
 
 = paginate @posts
 
+.posts-container
+  = render 'posts', :posts => @posts
+
 %table
   %tr
     %th Title

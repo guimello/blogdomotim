@@ -1,0 +1,4 @@
+- (posts ||= []).each do |post|
+  .post{:style => 'background-color: #ddd'}
+    %h2= post.title
+    %p= post.body
