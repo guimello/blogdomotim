@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
 
   after_save :add_user_role
 
+  def author_of?(post)
+    posts.exists? post
+  end
+
   def role?(role)
     !!roles.find_by_name(role.to_s)
   end
