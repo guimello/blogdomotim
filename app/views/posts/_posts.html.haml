@@ -1,6 +1,12 @@
 - (posts ||= []).each do |post|
   .post{:style => 'background-color: #ddd'}
     %h2= post.title
+    %i= l post.created_at
     %p= post.body
+    .post-footer
+      = link_to 'Show', post
+      = link_to 'Edit', edit_admin_post_path(post)
+      = link_to 'Destroy', admin_post_path(post), :confirm => 'Are you sure?', :method => :delete
+
 
 = load_more posts
