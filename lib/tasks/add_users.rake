@@ -1,7 +1,7 @@
 ################################################################################
 namespace :users do  
   ################################################################################
-  desc 'Creates users in the system eg.ADMIN=foo@bar.com'
+  desc 'Creates users in the system eg._ADMIN=foo@bar.com _USER=lol@wut.com _AUTHOR=jizzed@pants.com'
   task :add => :environment do
     password      = 'pa$$w0rd'
     admin_emails  = (ENV['_ADMIN'] || '').split(',').map   &:strip
