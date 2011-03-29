@@ -4,9 +4,9 @@
     %i= l post.created_at
     %p= post.body
     .post-footer
-      = link_to 'Show', post
-      = link_to 'Edit', edit_admin_post_path(post)
-      = link_to 'Destroy', admin_post_path(post), :confirm => 'Are you sure?', :method => :delete
+      = link_to 'Show', post if can? :read, post
+      = link_to 'Edit', edit_admin_post_path(post) if can? :edit, post
+      = link_to 'Destroy', admin_post_path(post), :confirm => 'Are you sure?', :method => :delete if can? :destroy, post
 
 
 = load_more posts
