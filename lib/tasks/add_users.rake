@@ -30,7 +30,7 @@ namespace :users do
     author_emails.each do |email|
       user = RakeUserHelper.build_user email, password
       user.save!
-      user.roles << Admin::Role.admin
+      user.roles << Admin::Role.author
 
       User.confirm_by_token user.confirmation_token
     
