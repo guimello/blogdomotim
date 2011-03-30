@@ -1,7 +1,7 @@
 class Admin::PostsController < InheritedResources::Base
   actions :new, :create, :edit, :update, :destroy
   
-  authorize_resource
+  load_and_authorize_resource :post
 
   respond_to :html
 
