@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
 
   after_save :add_user_role
 
+  scope :admins,  joins(:roles) & Admin::Role.with_admins
+  scope :authors, joins(:roles) & Admin::Role.with_authors
+  scope :users,   joins(:roles) & Admin::Role.with_users
+
   def author_of?(post)
     posts.exists? post
   end

@@ -12,6 +12,10 @@ class Admin::Role < ActiveRecord::Base
 
   validates :name, :presence => true, :allow_blank => true, :length => { :minimum => 1, :maximum => 255 }
 
+  scope :with_admins,   where(:name => ADMIN)
+  scope :with_authors,  where(:name => AUTHOR)
+  scope :with_users,    where(:name => USER)
+
   def self.admin
     find_by_name ADMIN
   end
