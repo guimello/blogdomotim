@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   before_filter :find_current, :only => :show
 
   def index
-    @posts = Post.page(params[:page]).per(params[:per])
+    @posts = Post.latest.page(params[:page]).per(params[:per])
 
     render 'posts.xhr' and return if request.xhr?
     respond_with @posts
