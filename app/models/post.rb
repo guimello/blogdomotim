@@ -4,4 +4,6 @@ class Post < ActiveRecord::Base
   validates :title, :presence => true, :length => { :minimum => 1, :maximum => 255 }, :allow_blank => true 
   validates :body,  :presence => true
   validates :user,  :presence => true
+
+  scope :latest, order('created_at DESC')
 end
